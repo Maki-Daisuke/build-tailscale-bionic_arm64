@@ -21,4 +21,5 @@ RUN git clone https://github.com/tailscale/tailscale.git  && \
 WORKDIR /app/tailscale
 
 RUN ./build_dist.sh tailscale.com/cmd/tailscale   && \
-    ./build_dist.sh tailscale.com/cmd/tailscaled
+    ./build_dist.sh tailscale.com/cmd/tailscaled  && \
+    mkdir /out  &&  mv tailscaled tailscale /out
